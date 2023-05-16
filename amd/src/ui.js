@@ -54,10 +54,9 @@ const displayDialogue = async(editor, data = {}) => {
     const pluginFrame = document.getElementById("clickview_iframe");
     const eventsApi = new CVEventsApi(pluginFrame.contentWindow); // eslint-disable-line
 
-    eventsApi.on('cv-lms-addvideo', function (event, detail) {
+    eventsApi.on('cv-lms-addvideo', function(event, detail) {
         editor.execCommand('mceInsertContent', false, detail.embedHtml);
         eventsApi.off('cv-lms-addvideo');
         modal.destroy();
     }, true);
 };
-

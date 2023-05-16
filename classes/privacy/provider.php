@@ -24,8 +24,6 @@
 
 namespace tiny_clickview\privacy;
 
-defined('MOODLE_INTERNAL') || die();
-
 /**
  * Privacy Subsystem for Tiny ClickView Video implementing null_provider.
  *

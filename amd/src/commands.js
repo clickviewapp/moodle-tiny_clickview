@@ -26,7 +26,7 @@ import {handleAction} from './ui';
 import {get_string as getString} from 'core/str';
 import {component, buttonName, icon} from './common';
 
-export const getSetup = async () => {
+export const getSetup = async() => {
     const [
         buttonText,
         buttonImage,
