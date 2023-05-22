@@ -1,10 +1,10 @@
 # Moodle ClickView TinyMCE editor plugin #
 
-[![Moodle Plugin CI](https://github.com/clickviewapp/moodle-tinymce_clickview/actions/workflows/moodle-ci.yml/badge.svg?branch=main)](https://github.com/clickviewapp/moodle-tinymce_clickview/actions/workflows/moodle-ci.yml)
+[![Moodle Plugin CI](https://github.com/clickviewapp/moodle-tiny_clickview/actions/workflows/moodle-ci.yml/badge.svg?branch=main)](https://github.com/clickviewapp/moodle-tiny_clickview/actions/workflows/moodle-ci.yml)
 
 The ClickView TinyMCE editor plugin for Moodle enables you to quickly and safely browse through your entire ClickView library, the ClickView exchange and your own personal workspace from within Moodle.
 
-This makes it easy to embed educational videos using the [TinyMCE editor](https://docs.moodle.org/311/en/TinyMCE_editor) and share them with your course participants.
+This makes it easy to embed educational videos using the [TinyMCE editor](https://docs.moodle.org/402/en/TinyMCE_editor) and share them with your course participants.
 
 ## Requirements ##
 
