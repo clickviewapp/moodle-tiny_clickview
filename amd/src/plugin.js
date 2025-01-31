@@ -31,34 +31,36 @@ import * as Configuration from './configuration';
 import * as Options from './options';
 
 // Setup the ClickView Video plugin to add a button and menu option.
-export default new Promise(async(resolve) => {
-    // Note: The PluginManager.add function does not support asynchronous configuration.
-    // Perform any asynchronous configuration here, and then call the PluginManager.add function.
-    const [
-        tinyMCE,
-        setupCommands,
-        pluginMetadata,
-    ] = await Promise.all([
-        getTinyMCE(),
-        Commands.getSetup(),
-        getPluginMetadata(component, pluginName),
-    ]);
+export default new Promise((resolve) => {
+    (async () => {
+        // Note: The PluginManager.add function does not support asynchronous configuration.
+        // Perform any asynchronous configuration here, and then call the PluginManager.add function.
+        const [
+            tinyMCE,
+            setupCommands,
+            pluginMetadata,
+        ] = await Promise.all([
+            getTinyMCE(),
+            Commands.getSetup(),
+            getPluginMetadata(component, pluginName),
+        ]);
 
-    // Note: The PluginManager.add function does not accept a Promise.
-    // Any asynchronous code must be run before this point.
-    tinyMCE.PluginManager.add(`${component}/plugin`, (editor) => {
-        // Register options.
-        Options.register(editor);
+        // Note: The PluginManager.add function does not accept a Promise.
+        // Any asynchronous code must be run before this point.
+        tinyMCE.PluginManager.add(`${component}/plugin`, (editor) => {
+            // Register options.
+            Options.register(editor);
 
-        // Setup ClickView CV Events API.
-        ClickView.setup(editor);
+            // Setup ClickView CV Events API.
+            ClickView.setup(editor);
 
-        // Setup the Commands (buttons, menu items, and so on).
-        setupCommands(editor);
+            // Setup the Commands (buttons, menu items, and so on).
+            setupCommands(editor);
 
-        return pluginMetadata;
-    });
+            return pluginMetadata;
+        });
 
-    // Resolve the ClickView Video plugin and include configuration.
-    resolve([`${component}/plugin`, Configuration]);
+        // Resolve the ClickView Video plugin and include configuration.
+        resolve([`${component}/plugin`, Configuration]);
+    })();
 });

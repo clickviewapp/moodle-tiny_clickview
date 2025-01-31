@@ -84,7 +84,7 @@ class plugininfo extends plugin implements
         return [
             // These will be mapped to a namespaced EditorOption in Tiny.
             'iframe' => Utils::get_iframe_html(),
-            'eventsApi' => Utils::get_eventsapi_url()->out()
+            'eventsApi' => Utils::get_eventsapi_url()->out(),
         ];
     }
 }
