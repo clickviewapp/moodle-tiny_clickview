@@ -32,7 +32,7 @@ import * as Options from './options';
 
 // Setup the ClickView Video plugin to add a button and menu option.
 export default new Promise((resolve) => {
-    (async () => {
+    (async() => {
         // Note: The PluginManager.add function does not support asynchronous configuration.
         // Perform any asynchronous configuration here, and then call the PluginManager.add function.
         const [

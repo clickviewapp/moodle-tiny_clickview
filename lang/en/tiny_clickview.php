@@ -25,6 +25,6 @@
 
 defined('MOODLE_INTERNAL') || die();
 
-$string['pluginname'] = 'Embed ClickView Video';
 $string['clickview:desc'] = 'Insert a ClickView video';
+$string['pluginname'] = 'Embed ClickView Video';
 $string['privacy:metadata'] = 'The TinyMCE ClickView plugin does not store any personal data.';
